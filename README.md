@@ -12,9 +12,12 @@ Please maintain a directory structure as follows:
   * Q1 - Pirates
     * pirates.txt
     * tests
-      * small.txt
-      * medium.txt
-      * large.txt
+      * small.in
+      * small.out
+      * medium.in
+      * medium.out
+      * large.in
+      * large.out
     * solutions
       * C++
         * pirates.cpp
