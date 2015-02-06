@@ -1,0 +1,14 @@
+# Death Star (part 1) by Andrew Sosa
+
+The backstory:
+
+    Luke Skywalker & pals have been captured by the Death Star! Using
+    their quick thinking, they've infiltrated a control room near the
+    hangar. Now, they must gain access to the control computer.
+
+The problem:
+
+    Numerical equations will be provided via stdin. The goal is to
+    evaluate the expression and print the result to the command line.
+    The expression should be evaluated from left-to-right, ignoring
+    order of operations.
