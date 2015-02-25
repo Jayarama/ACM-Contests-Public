@@ -1,0 +1,20 @@
+# Death Star 2 by Andrew Sosa
+
+The backstory:
+
+    Luke Skywalker & pals have been captured by the Death Star! Using
+    their quick thinking, they've infiltrated a control room near the
+    hangar. Now, they must gain access to the control computer.
+
+The problem:
+
+    Pairs of characters will be provided via stdin in the format of
+    [x,y]. The n'th pair must be matched to the n+1'th where pair n's
+    second character must match the n+1'th first character.
+
+    For example:
+
+        Input  - [x,y], [w,x], [y,z]
+        Output - [w,x], [x,y], [y,z]
+
+    Note, the final ordering of pairs must not strictly be alphabetical. 
