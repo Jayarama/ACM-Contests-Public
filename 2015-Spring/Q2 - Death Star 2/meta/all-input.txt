@@ -1,3 +1,15 @@
+[[w, c], [e, k], [c, e]]
+[[s, r], [r, k], [j, s]]
+[[a, p], [p, d], [u, a], [v, u]]
+
+
+
+[[m, h], [x, k], [e, a], [a, x], [h, j], [k, s], [s, m]]
+[[z, o], [j, z], [w, j], [i, u], [f, w], [o, a], [u, f]]
+[[k, p], [p, r], [r, e], [v, m], [q, v], [m, s], [e, a], [s, k]]
+
+
+
 [[k, g], [n, b], [d, l], [q, h], [p, k], [b, d], [y, n], [a, c], [l, q], [h, p], [g, a]]
 [[i, y], [r, s], [t, n], [k, e], [c, i], [g, c], [a, q], [q, t], [s, a], [v, k], [y, v], [n, g]]
 [[v, q], [z, y], [n, g], [w, h], [l, n], [y, l], [j, f], [q, j], [h, i], [r, z], [g, s], [i, r], [f, w]]
