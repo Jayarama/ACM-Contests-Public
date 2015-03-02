@@ -1,0 +1,21 @@
+# Garbage Compactor by Andrew Sosa
+
+The backstory:
+
+    After rescuing Princess Leia, our heroes jumped into the garbage
+    chute - but now the trash compactor is active! To prevent our
+    heroes from getting crushed, R2-D2 must hack into the control
+    and disable it! But first, he must crack the code. 
+
+The problem:
+
+    Pairs of characters will be provided via stdin in the format of
+    [x,y]. The n'th pair must be matched to the n+1'th where pair n's
+    second character must match the n+1'th first character.
+
+    For example:
+
+        Input  - [x,y], [w,x], [y,z]
+        Output - [w,x], [x,y], [y,z]
+
+    Note, the final ordering of pairs must not strictly be alphabetical.
