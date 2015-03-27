@@ -1,3 +1,30 @@
-Yarr! We be pirates by the 'morrow, and we be hoistin' our sails right quick!
+The input will consist of a map and directions. The map will be a square
+  arrangement of numbered landmarks. Each number corresponds to a specific
+  landmark. The directions will be a series of triples containing a landmark L,
+  a cardinal direction C, and a number N.
+The task is to determine all possible locations of burried treasure. This is
+  accomplished by navigating from waypoint to waypoint by following the series
+  of directions based on landmarks.
 
-Gettin' and plundering all the booty! Har har har!
+The start location will be landmark 0. The next landmark will be in a cardinal
+  direction from the current location, and the associated next waypoint will be
+  N units of distance in the direction C from this landmark.
+  
+There will only be one map and associated set of instructions per input file.
+
+
+
+Sample Input 1:
+5 3
+0 - - 1 -
+- - - - -
+- - - - 3
+- - 2 - -
+- - - - -
+1 S 3
+2 E 2
+3 N 1
+
+
+Sample Solution 1:
+(4,1)
