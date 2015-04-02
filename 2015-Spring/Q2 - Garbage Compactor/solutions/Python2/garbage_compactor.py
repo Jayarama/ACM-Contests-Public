@@ -13,7 +13,7 @@ def sort_line(line):
     for ch in characters:
         if bool:
             fronts.append(ch)
-        else :
+        else:
             backs.append(ch)
         # Flip bool
         bool = bool == False
