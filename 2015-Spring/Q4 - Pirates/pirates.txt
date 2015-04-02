@@ -3,7 +3,7 @@
 Yarr! We be pirates by the 'morrow, and we be hoistin' our sails right quick!
   As cap'n you "procured" a treasure map for yer crew, but 'fore ye had laid
   yer peepers upon the parchment, ye had made the order to cast off.
-  
+
 With wind in yer sails and spray o' the sea across the deck, ye retire to yer
   cabin, pull a flagon 'o mulled ale an mull over yer new map. Soon as ye
   spread the map out, ye start cussin' up what may be the foulest storm the
@@ -25,8 +25,8 @@ The input will consist of a map and instructions. The first line of the input
   Immediately following the map will be I triples of numbers, one per line.
   The triples contain a landmark number L, a cardinal direction C, and a
   distance D.
-  
-The task is to determine all possible locations of burried treasure. This is
+
+The task is to determine all possible locations of buried treasure. This is
   accomplished by navigating from waypoint to waypoint by following the series
   of instructions based on landmarks.
 
@@ -35,7 +35,7 @@ Each number L corresponds to a specific landmark. However, the map may contain
   landmark L will be in a cardinal direction from the current location and the
   associated next waypoint will be D units of distance in the direction C from
   this landmark.
-  
+
 There will only be one map and associated set of instructions per input test.
 
 Output should consist of 0-indexed coordinate pairs representing the potential

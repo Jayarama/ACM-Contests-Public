@@ -9,12 +9,14 @@ The backstory:
 The problem:
 
     Pairs of characters will be provided via stdin in the format of
-    [x,y]. The n'th pair must be matched to the n+1'th where pair n's
-    second character must match the n+1'th first character.
+    [x,y]. Pairs must be printed such that a given pair's first character
+    matches the preceding pair's second character, and a given pair's second
+    character matches the following pair's first character.
 
     For example:
 
-        Input  - [x,y], [w,x], [y,z]
-        Output - [w,x], [x,y], [y,z]
+        Input  - [[x,y], [w,x], [y,z]]
+        Output - [[w,x], [x,y], [y,z]]
 
-    Note, the final ordering of pairs must not strictly be alphabetical. 
+    Note, the final ordering of pairs must not strictly be alphabetical.
+    Additionally, a single batch of input might contain multiple lines.
