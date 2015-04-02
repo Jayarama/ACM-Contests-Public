@@ -1,40 +1,24 @@
 # garbage_compactor.py by Andrew Sosa
-import sys
-import string
+import sys, string
 
-def sort_line(line):
-    characters, fronts, backs, result = [], [], [], "["
+def sort_line(line, result = "["):
 
     # Filter all non alphabetic characters.
     characters = [x for x in line if x in string.ascii_letters]
 
-    # Grab fronts and backs
-    bool = True
-    for ch in characters:
-        if bool:
-            fronts.append(ch)
-        else:
-            backs.append(ch)
-        # Flip bool
-        bool = bool == False
+    # Grab all "backs" of pairs
+    backs = [characters[i] for i in range(1, len(characters), 2)]
 
     # Identify index of starting unique character
-    index = characters.index(next(x for x in fronts if x not in backs))
+    index = characters.index(next(x for x in characters if x not in backs))
 
     # Add formatted results for each index lookup
-    for i in range(0, len(fronts)):
+    for i in range(0, len(backs)):
         result = result + "[" + characters[index] + ", " + characters[index + 1] + "],"
-        if i < len(fronts) - 1:
-            index = next(x for x in range(0, len(characters)) if x != (index + 1) and characters[x] == characters[index + 1])
+        index = next((x for x in range(0, len(characters)) if x != (index + 1) and characters[x] == characters[index + 1]), 0)
 
     # Print formatted result
     print result.rstrip(",") + "]"
 
-# Read all the input
-lines = sys.stdin.readlines()
-
-# Clean the newlines
-lines = [l.strip() for l in lines]
-
-# Process for each line
-[sort_line(l) for l in lines]
+# Read all the input with cleaned the newlines, and print the "sorted" form
+[sort_line(l) for l in [l.strip() for l in sys.stdin.readlines()]]
