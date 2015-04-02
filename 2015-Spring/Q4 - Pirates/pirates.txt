@@ -1,17 +1,48 @@
-The input will consist of a map and directions. The map will be a square
-  arrangement of numbered landmarks. Each number corresponds to a specific
-  landmark. The directions will be a series of triples containing a landmark L,
-  a cardinal direction C, and a number N.
+=== Pirates Yo (Ho Ho) ===
+
+Yarr! We be pirates by the 'morrow, and we be hoistin' our sails right quick!
+  As cap'n you "procured" a treasure map for yer crew, but 'fore ye had laid
+  yer peepers upon the parchment, ye had made the order to cast off.
+  
+With wind in yer sails and spray o' the sea across the deck, ye retire to yer
+  cabin, pull a flagon 'o mulled ale an mull over yer new map. Soon as ye
+  spread the map out, ye start cussin' up what may be the foulest storm the
+  crew 'ave ever witnessed.
+
+The bleedin' varnment ye "procured" the map from let his little'ns scrawl o'er
+  it with crayons! Worse yet, if yer eyes not be deceivin' ye, the map be
+  scribed in crayon. Ye need best be gettin' the treasure locations 'fore ye
+  boots meet the earth, lest the crew question yer judgement.
+
+
+
+
+
+
+The input will consist of a map and instructions. The first line of the input
+  file will contain two numbers: the map width W and the number of instructions
+  I. The map will be a square arrangement of width W, spanning W lines.
+  Immediately following the map will be I triples of numbers, one per line.
+  The triples contain a landmark number L, a cardinal direction C, and a
+  distance D.
+  
 The task is to determine all possible locations of burried treasure. This is
   accomplished by navigating from waypoint to waypoint by following the series
-  of directions based on landmarks.
+  of instructions based on landmarks.
 
-The start location will be landmark 0. The next landmark will be in a cardinal
-  direction from the current location, and the associated next waypoint will be
-  N units of distance in the direction C from this landmark.
+Each number L corresponds to a specific landmark. However, the map may contain
+  duplicate or false landmarks. The start location will be landmark 0. The next
+  landmark L will be in a cardinal direction from the current location and the
+  associated next waypoint will be D units of distance in the direction C from
+  this landmark.
   
-There will only be one map and associated set of instructions per input file.
+There will only be one map and associated set of instructions per input test.
 
+Output should consist of 0-indexed coordinate pairs representing the potential
+  treasure locations. The coordinates should be sorted primarily by the x value
+  and secondarily by the y value. There should be no duplicates. The upper left
+  corner corresponds to coordinates (0,0) with coordinate values growing down
+  and to the right.
 
 
 Sample Input 1:
@@ -28,3 +59,23 @@ Sample Input 1:
 
 Sample Solution 1:
 (4,1)
+
+
+
+Sample Input 2:
+7 4
+7 - - - 7 - -
+- - - 2 - - -
+- - - - - - -
+- 1 - 0 - 1 4
+- - - - - - -
+- - - - - - -
+7 - - - - 7 -
+2 E 3
+4 S 0
+1 W 1
+7 E 1
+
+
+Sample Solution 2:
+(1,0) (1,6) (5,0)
