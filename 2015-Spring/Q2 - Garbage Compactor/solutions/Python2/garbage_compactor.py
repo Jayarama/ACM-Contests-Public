@@ -19,8 +19,7 @@ def sort_line(line):
         bool = bool == False
 
     # Identify index of starting unique character
-    start = next(x for x in fronts if x not in backs)
-    index = characters.index(start)
+    index = characters.index(next(x for x in fronts if x not in backs))
 
     # Add formatted results for each index lookup
     for i in range(0, len(fronts)):

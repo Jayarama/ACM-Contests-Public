@@ -29,7 +29,7 @@
 *.obj
 *.gch
 *.exe
-*.out
+#*.out
 
 # Java
 *.class
