@@ -38,6 +38,8 @@ Each number L corresponds to a specific landmark. However, the map may contain
 
 There will only be one map and associated set of instructions per input test.
 
+Some elements of the triples will be an X, indicating the value is illegible.
+
 Output should consist of 0-indexed coordinate pairs representing the potential
   treasure locations. The coordinates should be sorted primarily by the x value
   and secondarily by the y value. There should be no duplicates. The upper left
@@ -56,9 +58,8 @@ Sample Input 1:
 2 E 2
 3 N 1
 
-
 Sample Solution 1:
-(4,1)
+(4, 1)
 
 
 
@@ -76,6 +77,19 @@ Sample Input 2:
 1 W 1
 7 E 1
 
-
 Sample Solution 2:
 (1, 0) (1, 6) (5, 0)
+
+
+
+Sample Input 3:
+4 2
+1 - - 0
+2 - - 3
+- - - -
+- 1 - 0
+X S 2
+2 E 1
+
+Sample Solution 3:
+(1, 1)
