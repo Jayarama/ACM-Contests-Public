@@ -79,21 +79,37 @@ def FindLandmark(landmark, loc):
 
 # returns modified coordinates after moving in a cardinal direction
 def ApplyCardinalMove(loc, direction, distance):
-    ret_x = loc[0]
-    ret_y = loc[1]
-    if direction == 'N':
-        ret_y -= distance
-    elif direction == 'S':
-        ret_y += distance
-    elif direction == 'E':
-        ret_x += distance
-    elif direction == 'W':
-        ret_x -= distance
-    else:
-        if DEBUG:
-            print("ERROR: unknown direction")
-        return
-    return (ret_x, ret_y)
+    # ret_x = loc[0]
+    # ret_y = loc[1]
+    ret = []
+    
+    # create a list of all possible directions to move in
+    dirs = ['N', 'S', 'E', 'W'] if direction == 'X' else [direction]
+    
+    # create a list of all possible distances to travel
+    dist = range(map_dim) if distance == -1 else [distance]
+    
+    # for all possible combinations of direction and distance, find a point
+    for d1 in dirs:
+        for d2 in dist:
+            ret_x = loc[0]
+            ret_y = loc[1]
+    
+            if d1 == 'N':
+                ret_y -= d2
+            elif d1 == 'S':
+                ret_y += d2
+            elif d1 == 'E':
+                ret_x += d2
+            elif d1 == 'W':
+                ret_x -= d2
+            else:
+                if DEBUG:
+                    print("ERROR: unknown direction")
+                return ret
+                
+            ret.append( (ret_x, ret_y) )
+    return ret
 
 
 # checks if coordinates are valid
@@ -118,8 +134,10 @@ def GetChildren(loc, instruction):
     
     for landmark in found_landmarks:
         modified = ApplyCardinalMove(landmark, next_card, next_dist)
-        if ValidCoord(modified):
-            ret.append(modified)
+        
+        for m in modified:
+            if ValidCoord(m):
+                ret.append(m)
 
     return ret
 
@@ -156,7 +174,7 @@ while len(q) != 0:
 
 
 #print("\ntreasure locations: \n{}".format(treasure_locations))
-for loc in treasure_locations:
+for loc in sorted(treasure_locations):
     stdout.write("{} ".format(loc))
 stdout.write("\n")
 
