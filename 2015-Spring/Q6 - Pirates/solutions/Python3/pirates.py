@@ -4,8 +4,8 @@
 from sys import stdin, stdout
 from collections import deque
 
-DEBUG = False
-# DEBUG = True
+# DEBUG = False
+DEBUG = True
 
 
 # stores all potential start locations
@@ -24,7 +24,7 @@ if DEBUG:
 treasure_map = [line.strip().split() for line in data[1 : map_dim+1]]
 instructions = [line.strip().split() for line in data[map_dim+1 : map_dim+num_instr+1]]
 for i in instructions:
-    i[2] = int(i[2])
+    i[2] = int(i[2]) if i[2].isdigit() else -1
     
 if DEBUG:
     print("\nmap:")
@@ -48,17 +48,31 @@ if DEBUG:
 # searches in cardinal directions from provided location for landmark
 def FindLandmark(landmark, loc):
     if DEBUG:
-        print("searching for landmark {} from loc {}".format(landmark, loc))
+        print("    searching for landmark {} from loc {}".format(landmark, loc))
     ret = []
-    # search horizontally from location
-    for x in range(map_dim):
-        if treasure_map[loc[1]][x] == landmark:
-            ret.append( (x,loc[1]) )
-
-    # search vertically from direction
-    for y in range(map_dim):
-        if treasure_map[y][loc[0]] == landmark:
-            ret.append( (loc[0],y) )
+    
+    # if known search item, search for it
+    if landmark != 'X':
+        # search horizontally from location
+        for x in range(map_dim):
+            if treasure_map[loc[1]][x] == landmark:
+                ret.append( (x,loc[1]) )
+    
+        # search vertically from direction
+        for y in range(map_dim):
+            if treasure_map[y][loc[0]] == landmark:
+                ret.append( (loc[0],y) )
+    # otherwise get all landmarks
+    else:
+        # search horizontally from location
+        for x in range(map_dim):
+            if treasure_map[loc[1]][x] != '-':
+                ret.append( (x,loc[1]) )
+    
+        # search vertically from direction
+        for y in range(map_dim):
+            if treasure_map[y][loc[0]] != '-':
+                ret.append( (loc[0],y) )
     return ret
 
 
@@ -93,11 +107,15 @@ def ValidCoord(loc):
 # creates a list of all the child productions based on location and instruction
 def GetChildren(loc, instruction):
     if DEBUG:
-        print("finding children for {} based on {}".format(loc, instruction))
+        print("    finding children for {} based on {}".format(loc, instruction))
     ret = []
     
     next_landmark, next_card, next_dist = instruction
+    
+    # get all visible and applicable landmarks 
     found_landmarks = FindLandmark(next_landmark, loc)
+    
+    
     for landmark in found_landmarks:
         modified = ApplyCardinalMove(landmark, next_card, next_dist)
         if ValidCoord(modified):
@@ -129,9 +147,11 @@ while len(q) != 0:
     
     children = GetChildren(loc, instructions[inst])
     if DEBUG:
-        print("    children: \n{}".format(children))
+        print("children: \n{}".format(children))
     for child in children:
-        q.append( (child,popped[1]+1) )
+        e = (child,popped[1]+1)
+        if e not in q:
+            q.append( e )
 
 
 
