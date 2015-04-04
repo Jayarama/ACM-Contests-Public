@@ -2,9 +2,8 @@
 
 The backstory:
 
-    Luke Skywalker & pals have been captured by the Death Star! Using
-    their quick thinking, they've infiltrated a control room near the
-    hangar. Now, they must gain access to the control computer.
+    The gang has fallen into the Garbage Compactor! R2-D2 must now
+    hack into the control system to shut it off!
 
 The problem:
 
@@ -20,9 +19,3 @@ The problem:
 
     Note, the final ordering of pairs must not strictly be alphabetical.
     Additionally, a single batch of input might contain multiple lines.
-
-The bonus:
-
-    There is a special prize for any contestant who can solve this question
-    in fewer lines of code (comments and whitespace not included) than the 
-    question's author.
