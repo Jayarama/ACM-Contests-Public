@@ -20,3 +20,9 @@ The problem:
 
     Note, the final ordering of pairs must not strictly be alphabetical.
     Additionally, a single batch of input might contain multiple lines.
+
+The bonus:
+
+    There is a special prize for any contestant who can solve this question
+    in fewer lines of code (comments and whitespace not included) than the 
+    question's author.
