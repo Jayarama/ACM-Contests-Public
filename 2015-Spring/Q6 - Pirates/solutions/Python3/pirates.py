@@ -4,8 +4,8 @@
 from sys import stdin, stdout
 from collections import deque
 
-# DEBUG = False
-DEBUG = True
+DEBUG = False
+# DEBUG = True
 
 
 # stores all potential start locations
@@ -177,5 +177,3 @@ while len(q) != 0:
 for loc in sorted(treasure_locations):
     stdout.write("{} ".format(loc))
 stdout.write("\n")
-
-# TODO: BFS to find treasure
