@@ -14,11 +14,11 @@ def sort_line(line, result = "["):
 
     # Add formatted results for each index lookup
     for i in range(0, len(backs)):
-        result = result + "[" + characters[index] + ", " + characters[index + 1] + "],"
+        result = result + "[" + characters[index] + ", " + characters[index + 1] + "], "
         index = next((x for x in range(0, len(characters)) if x != (index + 1) and characters[x] == characters[index + 1]), 0)
 
     # Print formatted result
-    print result.rstrip(",") + "]"
+    print result.rstrip(", ") + "]"
 
 # Read all the input with cleaned the newlines, and print the "sorted" form
 [sort_line(l) for l in [l.strip() for l in sys.stdin.readlines()]]
