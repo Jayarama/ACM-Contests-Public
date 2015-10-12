@@ -1,7 +1,7 @@
 Arthur, King of the Britons
     Favorite Color: Gold
 
-Ser Bedemir
+Ser Bedemir of Camelot
     Favorite Color: Blue
 
 Ser Lancelot of Camelot
@@ -15,9 +15,8 @@ Ser Galahad of Camelot
 
 
 
-
-
 Shared:
     What is your quest? I seek the grail.
     What is the capital of Assyria? Nineveh
-    What is the airspeed velocity of an unladen swallow? African or European?
+    What is the airspeed velocity of an unladen swallow?
+        African or European?
