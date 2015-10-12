@@ -1,0 +1,23 @@
+Arthur, King of the Britons
+    Favorite Color: Gold
+
+Ser Bedemir
+    Favorite Color: Blue
+
+Ser Lancelot of Camelot
+    Favorite Color: Blue
+
+Ser Robin of Camelot
+    Favorite Color: Green
+
+Ser Galahad of Camelot
+    Favorite Color: Red
+
+
+
+
+
+Shared:
+    What is your quest? I seek the grail.
+    What is the capital of Assyria? Nineveh
+    What is the airspeed velocity of an unladen swallow? African or European?
