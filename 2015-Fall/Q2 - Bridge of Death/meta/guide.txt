@@ -1,16 +1,16 @@
 Arthur, King of the Britons
     Favorite Color: Gold
 
-Ser Bedemir of Camelot
+Sir Bedevere of Camelot
     Favorite Color: Blue
 
-Ser Lancelot of Camelot
+Sir Lancelot of Camelot
     Favorite Color: Blue
 
-Ser Robin of Camelot
+Sir Robin of Camelot
     Favorite Color: Yellow
 
-Ser Galahad of Camelot
+Sir Galahad of Camelot
     Favorite Color: Yellow
 
 
@@ -23,10 +23,10 @@ Shared:
 
 Exception:
     Galahad, Lancelot, and Robin only can answer the capital of Assyria
-    if Arthur or Bedemir correctly answered it previously. Otherwise, they
+    if Arthur or Bedevere correctly answered it previously. Otherwise, they
     say "I don't know that!", and fail to cross.
 
-    Only Bedemir and Arthur will respond "African or European?" to the airspeed
+    Only Bedevere and Arthur will respond "African or European?" to the airspeed
     velocity question. The other three will respond "I don't know that!" and
     fail to cross.
 
@@ -36,7 +36,7 @@ Exception:
     party member, he gives his own color, he successfully crosses.
 
 Failure:
-    If someone gives the wrong answer, they must print "AAAHHHHHHHHH" following
+    If someone gives the wrong answer, they must print "AAAHHHHHHHHH!" following
     their last output. If they have remaining questions, those questions are
     skipped, and the next party member starts with their first question.
 
