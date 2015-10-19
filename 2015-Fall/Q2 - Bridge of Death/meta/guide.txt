@@ -8,15 +8,41 @@ Ser Lancelot of Camelot
     Favorite Color: Blue
 
 Ser Robin of Camelot
-    Favorite Color: Green
+    Favorite Color: Yellow
 
 Ser Galahad of Camelot
-    Favorite Color: Red
+    Favorite Color: Yellow
 
 
 
 Shared:
-    What is your quest? I seek the grail.
+    What is your quest? I seek the grail
     What is the capital of Assyria? Nineveh
     What is the airspeed velocity of an unladen swallow?
         African or European?
+
+Exception:
+    Galahad, Lancelot, and Robin only can answer the capital of Assyria
+    if Arthur or Bedemir correctly answered it previously. Otherwise, they
+    say "I don't know that!", and fail to cross.
+
+    Only Bedemir and Arthur will respond "African or European?" to the airspeed
+    velocity question. The other three will respond "I don't know that!" and
+    fail to cross.
+
+    When asked his favorite color, Galahad will respond with the favorite color
+    of the person who successfully crossed last. If it happens to match his
+    actual favorite color, he successfully crosses. If there was no previous
+    party member, he gives his own color, he successfully crosses.
+
+Failure:
+    If someone gives the wrong answer, they must print "AAAHHHHHHHHH" following
+    their last output. If they have remaining questions, those questions are
+    skipped, and the next party member starts with their first question.
+
+
+Test Cases:
+
+    SMALL tests basic questions, dosn't deal with special cases.
+    MEDIUM uses exceptions where all party members live.
+    LARGE uses exceptions are usually failed.
