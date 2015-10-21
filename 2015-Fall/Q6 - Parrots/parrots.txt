@@ -1,28 +1,54 @@
-TODO: Story & flavor text
-TODO: Make harder
-  -Allow for reuse of characters between descriptor sets
-    -Fixed ordering of descriptors? For bad inputs as well?
-    -Arbitrary ordering
+Another fine day in Evstonhiltockmanbeyroqueshire. As usual, you open up shop
+  and ponder if your sign entitled "Birds of Evstonhiltockmanbeyroqueshire"
+  might have cost less if you had set up shop somewhere else, say... Ipswich.
+  One thing has been bothering you, however. Whilst enjoying a jolly good 
+  stroll from your place of residence to your shop (you discounted living above
+  since it was curved), you made note of a rather silly group of individuals
+  walking about, searching for their friend Bruce. The group reminded you of
+  a few birds sold in your brother's shop, as one of them was dressed as a
+  proper penguin. That is not to say the individual was dressed in a tuxedo and
+  other finery, but rather they were in a penguin suit. Indeed, quite the
+  silly lot.
+  
+Deciding to get on with it, you note a letter was delivered to the shop,
+  warning you of a sudden outbreak of stonecolditus among literally hundreds
+  of bird species. Understanding this means a great many attempted returns,
+  you prepare yourself for the horde of discontent customers. The guild will
+  only compensate you for returned birds which have indeed bitten the dust,
+  checked out, become fully and wholly defunct, or snuffed it. In other words,
+  ones which are right proper dead. The problem with stonecolditus is that it
+  affects the plumage, behaviour and a multitude of other aspects of birds.
+  
+You will need to determine not only if the bird was one which you sold, but
+  also if it is deceased or just suffering in untold agony.
 
 ==============================================================================
 
-You will be privided a series of qualifiers which describe birds you know of.
+You will be provided a series of qualifiers which describe birds you know of.
 You will also be provided a list of qualifiers for each attempted return.
   
 These descriptions must make sense. For example, in a world where only blue
-  and red birds exist, sad though it may be, a green bird would be unheard of. 
-  Were someone to try and return a supposedly nonexistant bird to your shop, you
-  would take issue with this. All valid, mutually exclusive descriptors of a
-  specific category comprise a descriptor set.
+  and red birds exist, sad though it may be, word of a green bird would be 
+  unheard of. Were someone to try and return a supposedly nonexistant bird to
+  your shop, you would take issue with this. All valid, mutually exclusive
+  descriptors of a specific category (for example, its penchant for SPAM)
+  comprise a descriptor set.
 
 Being a frugal shop owner suffering an onslaught of questionable customer
   service claims, you have a stinginess factor. Should the questionable nature
   of the return exceed your stinginess factor, you will reject the return.
-  Each oddity you note should count once against that claim.
+  Each oddity you note should count once against that claim. An oddity can be
+  a missing descriptor, using an unacceptable descriptor in lieu of an
+  acceptable one, or having an extraneous descriptor.
 
 A RED, SCREAMING, COCONUT PARROT could be described as RSCP. A RED, SCREAMING, 
   LIME PARROT could be described as RSLP. A SLUGGISH, RED, LAMENTING, COCONUT
   PARROT could be described as SRLCP.
+However, customers are largely common folk, and thusly not trained in the ways
+  of SNA (Standard Name Abbreviation). You might be told that a bird is a PARROT
+  who loves COCONUTs and may or may not have turned itself RED from SCREAMING
+  so much, which in your haste would be written as PCRS. You should treat both
+  PCRS and RSCP as equivalent descriptions.
   
 Input will consist of one test case per file. On the first line will be D, the
   number of descriptor sets; N, the number of attempted returns; and S, your
@@ -31,16 +57,3 @@ Input will consist of one test case per file. On the first line will be D, the
 
 Your output should consist of either the letter 'y' or 'n' depending on
   whether you accept the return or not.
- 
-
-Sample Input 1:
-3 3 2
-RGB SQD P
-RSP
-GSP
-MHGIP
-
-Sample Output 1:
-y
-y
-n
