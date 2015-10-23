@@ -26,36 +26,31 @@ public class HolyHandNumbers {
     }
 
     void Counteth(String n){
-
         //long t1 = System.nanoTime();
-        long stoppeth = Long.valueOf(n);
-
-        //Last digit must be a 3.
-        if (stoppeth%10 >= 3)
-            stoppeth /= 10;
-        else {
-            stoppeth /= 10; //e.g. 12342- we can't reply counting 12343 as a HHN.
-            stoppeth--;
-        }
+        Integer stoppeth = Integer.valueOf(n);
 
         String s;
         long count = 0;
-        for (Long i = Long.valueOf(0); i < stoppeth; i++){
+
+        //System.out.printf("# holy hand number")
+        for (Integer i = 3; i <= stoppeth; i += 10){
             s = i.toString();
             //s += "3"; //May be assumed.
 
             if (!s.contains("5")) {
-                if (isHHN(s))
+                if (isHHN(s)){
+                    //System.out.println(Long.valueOf(s + "3"));
                     count++;
+                  }
             }
-            else if (i%10 != 5)
-                i = Long.valueOf(s.replace("5", "6"));
+            //else if (i%10 != 5)
+                //i = Long.valueOf(s.replace("5", "6"));
         }
         //System.out.print(output);
 
         //long t2 = System.nanoTime();
-        //System.out.printf("Number of Holy Hand Numbers that do precede thy number: %d (%g s)\n\n", count, (t2 - t1)*Math.pow(10.0, -9));
-        System.out.println(count);
+        System.out.printf("%d\n", count);
+        //System.out.println(count);
 
         return;
     }

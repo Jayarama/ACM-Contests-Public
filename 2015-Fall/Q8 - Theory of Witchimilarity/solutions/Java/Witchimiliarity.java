@@ -41,6 +41,8 @@ public class Witchimiliarity {
         }
 
         int p1 = -1, p2 = -1;
+        int desiredSize = (int) (0.9 * population.size());
+
         double maxW = -999999999;
         for (int i = 0; i < population.size(); i++)
             for (int j = i; j < population.size(); j++)
@@ -55,20 +57,24 @@ public class Witchimiliarity {
 
         notWitches.add(population.elementAt(p1));
         notWitches.add(population.elementAt(p2));
+        population.remove(notWitches.elementAt(0));
+        population.remove(notWitches.elementAt(1));
 
-        while (notWitches.size() != 0.9 * population.size()){
+        while (notWitches.size() != desiredSize){
             doItr();
         }
 
 
 
         Vector<String> Witches = new Vector<String>();
+        for(Person p : population)
+            Witches.add(p.name);
 
-        for (int i = 0; i < population.size(); i++) {
+        /*for (int i = 0; i < population.size(); i++) {
             if (!notWitches.contains(population.elementAt(i))){
                 Witches.add(population.elementAt(i).name);
             }
-        }
+        }*/
 
         Collections.sort(Witches, String.CASE_INSENSITIVE_ORDER);
 
@@ -107,7 +113,10 @@ public class Witchimiliarity {
             }
 
         //System.out.printf("Found a not-witch: %s (%g)\n", population.elementAt(best).name, wMax);
-        notWitches.add(population.elementAt(best));
+        Person p = population.elementAt(best);
+        notWitches.add(p);
+        population.remove(p);
+
     }
 
     class Person{
